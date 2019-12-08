@@ -1,0 +1,55 @@
+/**
+ * The scale.
+ */
+
+// Base
+$g-font-size: 16;
+
+// Font decrement
+$g-font-size-small: $g-font-size - 2;
+$g-font-size-x-small: $g-font-size - 4;
+$g-font-size-2x-small: $g-font-size - 6;
+
+// Font increment
+$g-font-size-large: $g-font-size + 2;
+$g-font-size-x-large: $g-font-size + 4;
+$g-font-size-2x-large: $g-font-size + 8;
+$g-font-size-3x-large: $g-font-size + 12;
+
+$g-spacing: 16;
+
+// Spacing decrease
+$g-spacing-small: floor($g-spacing * 0.75); // 12
+$g-spacing-x-small: floor($g-spacing * 0.5); // 8
+$g-spacing-2x-small: floor($g-spacing * 0.25); // 4
+
+
+// Spacing increase
+$g-spacing-large: ceil($g-spacing * 1.25); // 20
+$g-spacing-x-large: ceil($g-spacing * 1.75);
+$g-spacing-2x-large: ceil($g-spacing * 2.5);
+$g-spacing-3x-large: ceil($g-spacing * 3.5);
+$g-spacing-4x-large: ceil($g-spacing * 5);
+
+// Font weight
+$g-font-weight-bold: 700;
+$g-font-weight-semibold: 600;
+$g-font-weight: 400;
+$g-font-weight-light: 300;
+
+// Base colour
+$g-color-white: #fff;
+$g-color-black: #000;
+
+// Text colour
+$g-color-primary: #0bb4b4;
+$g-color-text: #4a4a4a;
+$g-color-text-secondary: #03455d;
+$g-color-text-grey: #4a4a4a;
+
+// State colour
+$g-color-danger: #cc3334;
+$g-color-success: #009900;
+
+// Element colour
+$g-color-border: #ced5df;

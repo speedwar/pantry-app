@@ -1,0 +1,33 @@
+
+.l-grid {
+  display: flex;
+}
+
+.l-grid--align-center {
+  align-items: center;
+}
+
+.l-grid--center {
+  justify-content: center;
+}
+
+.l-grid--all-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.l-grid--space-between {
+  justify-content: space-between;
+}
+
+.l-grid__item {
+  margin-right: rem($g-spacing);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.l-grid__item--last {
+  margin-left: auto;
+}

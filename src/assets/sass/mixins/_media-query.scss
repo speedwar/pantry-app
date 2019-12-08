@@ -1,0 +1,22 @@
+$g-desktop-bp: 1200px;
+$g-tablet-bp: 992px;
+$g-mobile-bp: 640px;
+
+// Mobile First Method
+@mixin desktop {
+  @media only screen and (min-width: $g-tablet-bp - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $g-mobile-bp - 1px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: $g-mobile-bp - 1px) {
+    @content;
+  }
+}

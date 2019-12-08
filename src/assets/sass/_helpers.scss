@@ -1,0 +1,51 @@
+// Spacing
+.h-spacing-2x-small {
+  margin-bottom: rem($g-spacing-2x-small);
+}
+
+.h-spacing-x-small {
+  margin-bottom: rem($g-spacing-x-small);
+}
+
+.h-spacing-small {
+  margin-bottom: rem($g-spacing-small);
+}
+
+.h-spacing {
+  margin-bottom: rem($g-spacing);
+}
+
+.h-spacing-large {
+  margin-bottom: rem($g-spacing-large);
+}
+
+.h-spacing-x-large {
+  margin-bottom: rem($g-spacing-large * 2);
+}
+
+.h-spacing-2x-large {
+  margin-bottom: rem($g-spacing-large * 3);
+}
+
+
+// Colours
+.h-color-primary {
+  color: $g-color-primary;
+}
+
+.h-color-success {
+  color: $g-color-success;
+}
+
+// State Helper
+.is-hidden {
+  display: none !important;
+}
+
+.h-no-margin {
+  margin: 0 !important;
+}
+
+.h-v-hidden {
+  visibility: hidden;
+}
