@@ -13,7 +13,6 @@
     "build:prod": "jest && webpack -p --config ./webpack/webpack.config.js --display-error-details",
     "build:silent": "jest --silent && webpack -p --config ./webpack/webpack.config.js --hide-modules",
     "test": "jest --verbose",
-    "test:watch": "jest --watchAll",
     "test:update": "jest --update-snapshot --detectOpenHandles",
     "test:coverage": "jest --coverage",
     "test:silent": "jest --silent --clearCache",

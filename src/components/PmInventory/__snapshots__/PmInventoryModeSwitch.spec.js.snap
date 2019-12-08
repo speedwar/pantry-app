@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PmInventoryModeSwitch /> component renders component 1`] = `
+exports[`<PmInventoryModeSwitch /> component renders component with props 1`] = `
 Object {
   "props": Object {
     "userContext": Object {
