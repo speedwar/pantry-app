@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { inventoryActions } from 'rx/actions'
+import { pantryRequestActions, inventoryActions } from 'rx/actions'
 // import PropTypes from 'prop-types'
 import { isNumber } from 'utils'
 
@@ -36,7 +36,7 @@ const PmInventoryItemController = ({
     if (userContext.userType === 'storekeeper') {
       dispatch(inventoryActions.updateInventory(itemData))
     } else {
-      // TODO: Chef action
+      dispatch(pantryRequestActions.updatePantryRequest(itemData))
     }
   }
 
@@ -49,7 +49,7 @@ const PmInventoryItemController = ({
     if (userContext.userType ==='storekeeper') {
       dispatch(inventoryActions.updateInventory(itemData))
     } else {
-      // TODO: Chef action
+      dispatch(pantryRequestActions.updatePantryRequest(itemData))
     }
   }
 
@@ -62,7 +62,7 @@ const PmInventoryItemController = ({
     if (userContext.userType === 'storekeeper') {
       dispatch(inventoryActions.updateInventory(itemData))
     } else {
-      // TODO: Chef action
+      dispatch(pantryRequestActions.updatePantryRequest(itemData))
     }
   }
 

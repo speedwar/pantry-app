@@ -2,15 +2,14 @@ import { inventoryConstants } from 'rx/constants'
 
 const initialState = {
   status: null,
-  inventory: null,
+  inventory: [],
   error: { // Good Error Examples
-    'status': null,
-    'message': null,
+    status: null,
+    message: null,
   }
 }
 
 export function inventoryReducer(state = initialState, action) {
-
   switch (action.type) {
     /*
      * GET
@@ -19,7 +18,6 @@ export function inventoryReducer(state = initialState, action) {
       return {
         ...state,
         status: { request: true },
-        inventory: null,
         error: null
       }
     case inventoryConstants.INVENTORY_LOAD_SUCCESS:
@@ -34,7 +32,6 @@ export function inventoryReducer(state = initialState, action) {
       return {
         ...state,
         status: { success: false },
-        inventory: null,
         error: action.error
       }
 

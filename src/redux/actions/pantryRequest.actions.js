@@ -1,13 +1,14 @@
 import { pantryRequestConstants } from 'rx/constants'
 
+
 export const pantryRequestActions = {
   updatePantryRequest,
 }
 
-function updatePantryRequest() {
+function updatePantryRequest(data) {
   return (dispatch) => {
     dispatch(request())
-    dispatch(success())
+    dispatch(success(data))
   }
 
   function request() {

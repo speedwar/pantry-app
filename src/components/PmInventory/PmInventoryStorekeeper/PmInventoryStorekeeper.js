@@ -27,7 +27,6 @@ const PmInventoryStorekeeper = ({ list }) => {
           />
         </div>
       </div>
-
       <PmInventoryItemController
         title='Add / Remove / Modify Item Inventory'
       />

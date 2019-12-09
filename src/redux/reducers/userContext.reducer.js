@@ -3,11 +3,11 @@ import { userContextConstants } from 'rx/constants'
 const initialState = {
   status: null,
   userContext: {
-    userType: 'storekeeper' // Default userType is chef for demo
+    userType: 'chef' // Default userType
   },
   error: {
-    'status': null,
-    'message': null,
+    status: null,
+    message: null,
   }
 }
 

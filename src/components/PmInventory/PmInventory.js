@@ -16,7 +16,7 @@ const PmInventoryChef = lazy(() =>
 const PmInventoryStorekeeper = lazy(() => 
   import('components/PmInventory/PmInventoryStorekeeper/PmInventoryStorekeeper'))
 
-const PmInventory = ({ dispatch, userContext, inventory }) => {
+const PmInventory = ({ dispatch, userContext, pantry, inventory }) => {
   // Mounting
   useEffect(() => {
     dispatch(inventoryActions.getInventory())
@@ -27,7 +27,7 @@ const PmInventory = ({ dispatch, userContext, inventory }) => {
     <Suspense fallback={ <LoadingScreen /> }>
       <div className='pm-inventory mt-3 border'>
         { userContext.userType === 'chef'
-          ? <PmInventoryChef list={ inventory }/>
+          ? <PmInventoryChef list={ pantry } />
           : <PmInventoryStorekeeper list={ inventory } />
         }
       </div>
@@ -35,8 +35,13 @@ const PmInventory = ({ dispatch, userContext, inventory }) => {
   )
 }
 
+PmInventory.defaultProps = {
+  pantry: []
+}
+
 PmInventory.propTypes = {
-  inventory: PropTypes.object.isRequired,
+  inventory: PropTypes.array.isRequired,
+  pantry: PropTypes.array,
   userContext: PropTypes.object.isRequired
 }
 
@@ -45,15 +50,15 @@ function mapStateToProps(state) {
     userContext
   } = state.userContextReducer
   const {
-    pantryRequest
+    pantry
   } = state.pantryRequestReducer
   const {
     inventory,
   } = state.inventoryReducer
   return {
     inventory,
-    pantryRequest,
-    userContext
+    pantry,
+    userContext,
   }
 }
 

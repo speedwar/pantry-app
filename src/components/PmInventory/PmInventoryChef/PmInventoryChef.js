@@ -23,11 +23,10 @@ const PmInventoryChef = ({ list }) => {
         <div className='col-sm-12 col-md-6'>
           <PmInventoryItemListContainer
             title='Pantry Request'
-            items={ null }
+            items={ list }
           />
         </div>
       </div>
-
       <PmInventoryItemController 
         title='Add / Remove / Modify Pantry Request'
       />
