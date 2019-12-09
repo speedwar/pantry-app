@@ -27,8 +27,13 @@ const PmInventory = ({ dispatch, userContext, pantry, inventory }) => {
     <Suspense fallback={ <LoadingScreen /> }>
       <div className='pm-inventory mt-3 border'>
         { userContext.userType === 'chef'
-          ? <PmInventoryChef list={ pantry } />
-          : <PmInventoryStorekeeper list={ inventory } />
+          ? <PmInventoryChef 
+              list={ pantry }
+            />
+          : <PmInventoryStorekeeper
+              list={ inventory }
+              pantryList={ pantry }
+            />
         }
       </div>
     </Suspense>

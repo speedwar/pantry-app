@@ -4,7 +4,7 @@ import PmInventoryItemListContainer from 'components/PmInventory/PmInventoryItem
 import PmInventoryItemController from 'components/PmInventory/PmInventoryItemController'
 import PmInventoryModeSwitch from 'components/PmInventory/PmInventoryModeSwitch'
 
-const PmInventoryStorekeeper = ({ list }) => {
+const PmInventoryStorekeeper = ({ list, pantryList }) => {
   return (
     <>
       <div className='l-grid l-grid--center p-2 p-2 border-bottom'>
@@ -15,7 +15,7 @@ const PmInventoryStorekeeper = ({ list }) => {
           <PmInventoryItemListContainer
             edit={ true }
             title='Received Pantry requests'
-            items={ null }
+            items={ pantryList }
             requestActionClick={ () => {} }
             requestActionName='Fulfill Selected Requests'
           />
