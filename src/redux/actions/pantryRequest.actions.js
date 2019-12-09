@@ -22,7 +22,6 @@ function updatePantryRequest(data) {
 
 function fulfillPantryRequest(data) {
   return (dispatch) => {
-    dispatch(request())
     dispatch(success(data))
   }
 
